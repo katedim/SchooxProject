@@ -1,0 +1,50 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "title1",
+      "author": "author 1",
+      "body": "This is the article 1",
+      "favArticle": false
+    },
+    {
+      "id": "2",
+      "title": "title2",
+      "author": "author 2",
+      "body": "This is the article 2",
+      "favArticle": false
+    },
+    {
+      "id": "3",
+      "title": "title3",
+      "author": "author 3",
+      "body": "Thessaloniki is located on the Thermaic Gulf, at the northwest corner of the Aegean Sea. It is bounded on the west by the delta of the Axios. The municipality of Thessaloniki, the historical centre, had a population of 319,045 in 2021,[5] while the Thessaloniki metropolitan area had 1,006,112 inhabitants and the Thessaloniki (regional unit) had 1,092,919.[11][3] It is Greece's second major economic, industrial, commercial and political centre, and a major transportation hub for Greece and southeastern Europe, notably through the Port of Thessaloniki.[12] The city is renowned for its festivals, events and vibrant cultural life in general,[13] and is considered to be Greece's cultural capital.[13] Events such as the Thessaloniki International Fair and the Thessaloniki International Film Festival are held annually, while the city also hosts the largest bi-annual meeting of the Greek diaspora.[14] Thessaloniki was the 2014 European Youth Capital.[15] The city's main university, Aristotle University, is the largest in the Balkans.[16]      The city was founded in 315 BC by Cassander of Macedon, who named it after his wife Thessalonike, daughter of Philip II of Macedon and sister of Alexander the Great. An important metropolis by the Roman period, Thessaloniki was the second largest and wealthiest city of the Byzantine Empire. It was conquered by the Ottomans in 1430 and remained an important seaport and multi-ethnic metropolis during the nearly five centuries of Turkish rule, and from the 16th to the 20th century was the only Jewish-majority city in Europe. It passed from the Ottoman Empire to the Kingdom of Greece on 8 November 1912. Thessaloniki exhibits Byzantine architecture, including numerous Paleochristian and Byzantine monuments, a World Heritage Site, as well as several Roman, Ottoman and Sephardic Jewish structures.",
+      "favArticle": false
+    },
+    {
+      "id": "4",
+      "title": "title4",
+      "author": "author 4",
+      "body": "This is a new article",
+      "favArticle": false
+    },
+    {
+      "id": "5",
+      "title": "title5",
+      "author": "author 5",
+      "body": "This is a new article",
+      "favArticle": false
+    }
+  ],
+  "routes": [
+    {
+      "/articles/:title": "/articles?title=:title"
+    },
+    {
+      "/articles/:author": "/articles?title=:author"
+    },
+    {
+      "/articles/:id": "/articles?id=:id"
+    }
+  ]
+}

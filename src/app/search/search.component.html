@@ -1,0 +1,46 @@
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="container" [ngStyle]="{'margin-top': '50px'}">
+    <form [formGroup]="searchForm">
+      <div class="form-group">
+        <div class="card text-center">
+          <div class="card-header">
+            <div class="search-container">
+              <input type="text" formControlName="name" placeholder="Start searching..." class="search-input">
+            </div>
+            <div class="router-link-container">
+              <div [routerLink]="'/articles/favorites'" class="router-link"><mat-icon>star_outline</mat-icon></div>
+            </div>
+          </div>
+          <div *ngIf="articleArray.length > 0 ; else noFound">
+            <div *ngFor="let article of articleArray" class="card-body text-center">
+              <div class="card-body">
+                <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}"
+                  routerLink="/articles/{{article.title}}">{{article.title}}</a>
+                <p class="card-text">{{article.body | shorten:150 }}
+                  <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" *ngIf="article.body.length > 150"
+                    routerLink="/articles/{{article.title}}">read more
+                  </a>
+                </p>
+                <div class="card-footer text-muted">
+                  by {{ article.author }}
+                  <button mat-button (click)="article.favArticle = !article.favArticle ; updateFavArticle(article)">
+                    <div *ngIf="!article.favArticle">
+                      <mat-icon>star_outline</mat-icon>
+                    </div>
+                    <div *ngIf="article.favArticle">
+                      <mat-icon>star</mat-icon>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <hr [ngStyle]="{'border-top': '2px solid blue'}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<ng-template #noFound>Sorry. No articles where found.</ng-template>

@@ -1,0 +1,23 @@
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="container" [ngStyle]="{'margin-top': '50px'}">
+    <div class="card text-center">
+      <div class="card-header">
+        {{articleTitle}}
+      </div>
+      <div class="card-body">
+        <div *ngIf="article">{{article.title}}
+          <div class="card-body">
+            <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" >{{article.title}}</a>
+            <p class="card-text">{{articleBody}}</p>
+            <div class="card-footer text-muted">
+              by {{ articleAuthor }}
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="card-footer text-muted">
+        <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" routerLink="/articles">Go back to the articles</a>
+      </div>
+    </div>
+  </div>
+</div>
