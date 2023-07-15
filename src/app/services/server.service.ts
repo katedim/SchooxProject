@@ -30,7 +30,6 @@ export class ServerService {
 
    getArticlesByAuthor(author: Author) {
     const url = `${this.serviceUrl}?author.id=${author.id}`;
-    console.log(url);
     return this.http.get<Article[]>(url);
   }
 
