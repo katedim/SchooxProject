@@ -14,7 +14,8 @@ export class ReadArticleComponent implements OnInit {
   article: Article = new Article();
   articleArray: Article[] = [];
   test:  string ='';
-  articleAuthor: string = '';
+  articleAuthorName: string = '';
+  articleAuthorId: string = '';
   articleBody: string = '';
 
   constructor(private route: ActivatedRoute, private serverService: ServerService) { }
@@ -31,7 +32,8 @@ export class ReadArticleComponent implements OnInit {
       (article: Article) => {
         if (article) {
           const articles = JSON.parse(JSON.stringify(article));
-          this.articleAuthor = articles[0]?.author;
+          this.articleAuthorName = articles[0]?.author.name;
+          this.articleAuthorId = articles[0]?.author.id;
           this.articleBody = articles[0]?.body;
           this.article = article;
 
