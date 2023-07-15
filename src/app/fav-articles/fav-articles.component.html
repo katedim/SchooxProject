@@ -21,8 +21,9 @@
                   <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" *ngIf="article.body.length > 150" routerLink="/articles/{{article.title}}">read more
                   </a>
                 </p>
-                <div class="card-footer text-muted">
-                  by {{ article.author }}
+                <div class="card-footer text-muted">by
+                  <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" routerLink="/articles/authors/{{article.author.id}}">{{ article.author.name }}
+                  </a>
                 </div>
               </div>
               <hr [ngStyle]="{'border-top': '2px solid blue'}">

@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit{
   searchForm: any;
   articleObj: Article = new Article();
   articleArray: Article[] = [];
-  // favArticle: boolean = false;
 
   constructor(searchForm: FormBuilder, private serverService: ServerService) {
 
@@ -45,7 +44,7 @@ export class SearchComponent implements OnInit{
           map((res: Article[]) =>
             res.filter((article: Article) =>
               article.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-              article.author.toLowerCase().includes(searchValue.toLowerCase()) ||
+              article.author.name.toLowerCase().includes(searchValue.toLowerCase()) ||
               article.body.toLowerCase().includes(searchValue.toLowerCase())
             )
           )

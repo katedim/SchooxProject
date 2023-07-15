@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Article } from '../models/article';
+import { Author } from '../models/author';
 
 @Injectable({
   providedIn: 'root'
@@ -26,4 +27,11 @@ export class ServerService {
    editArticle( article: Article) {
     return this.http.put<Article>(this.serviceUrl+'/'+article.id, article);
    }
+
+   getArticlesByAuthor(author: Author) {
+    const url = `${this.serviceUrl}?author.id=${author.id}`;
+    console.log(url);
+    return this.http.get<Article[]>(url);
+  }
+
 }

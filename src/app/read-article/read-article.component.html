@@ -1,16 +1,22 @@
 <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
   <div class="container" [ngStyle]="{'margin-top': '50px'}">
     <div class="card text-center">
-      <div class="card-header">
-        {{articleTitle}}
+        <div class="card-header">
+          <div class="search-container">
+            <h2 [ngStyle]="{'color': 'blue'}">{{articleTitle}}</h2>
+          </div>
+          <div class="router-link-container">
+            <div [routerLink]="'/articles'" class="router-link"><mat-icon>home</mat-icon></div>
+          </div>
       </div>
       <div class="card-body">
         <div *ngIf="article">{{article.title}}
           <div class="card-body">
             <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" >{{article.title}}</a>
             <p class="card-text">{{articleBody}}</p>
-            <div class="card-footer text-muted">
-              by {{ articleAuthor }}
+            <div class="card-footer text-muted">by
+              <a [ngStyle]="{'color': 'blue', 'margin-top.px': 10}" routerLink="/articles/authors/{{articleAuthorId}}">{{ articleAuthorName }}
+              </a>
             </div>
           </div>
       </div>

@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.search-input {
+  width: 100%;
+  max-width: 200px;
+}
+
 .router-link-container {
   margin-left: 10px;
 }
