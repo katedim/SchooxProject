@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Observable, debounceTime, map, switchMap } from 'rxjs';
-import { ServerService } from '../services/server.service';
-import { Article } from '../models/article';
+import { ServerService } from '../../services/server.service';
+import { Article } from '../../models/article';
 
 @Component({
   selector: 'app-search',

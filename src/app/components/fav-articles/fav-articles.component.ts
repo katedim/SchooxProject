@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ServerService } from '../services/server.service';
+import { ServerService } from '../../services/server.service';
 import { map } from 'rxjs';
-import { Article } from '../models/article';
+import { Article } from '../../models/article';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

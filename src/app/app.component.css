@@ -1,0 +1,24 @@
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 200px;
+}
+
+.router-link-container {
+  margin-left: 10px;
+}
+
+.router-link {
+  cursor: pointer;
+  color: blue;
+}

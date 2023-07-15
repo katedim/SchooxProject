@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ServerService } from '../services/server.service';
-import { Author } from '../models/author';
-import { Article } from '../models/article';
+import { ServerService } from '../../services/server.service';
+import { Author } from '../../models/author';
+import { Article } from '../../models/article';
 
 @Component({
   selector: 'app-by-author',
@@ -27,7 +27,6 @@ export class ByAuthorComponent implements OnInit{
       this.serverService.getArticlesByAuthor(author).subscribe(
         (res) => {
           this.authorArticlesArray = res;
-          console.log(this.authorArticlesArray);
           this.author.name = this.authorArticlesArray[0].author.name;
         },
         (err) => {
