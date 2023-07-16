@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
   background-image: url('/assets/images/errorpage.png');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 50%;
+  padding-top: 50px;
 }
 
 .content {
